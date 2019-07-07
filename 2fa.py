@@ -41,5 +41,5 @@ if __name__ == "__main__":
         print("Countdown:", 30 - (int(time.time()) % 30))
         for account,secret in data.items():
             code = get_totp(secret.replace(" ", "").upper())
-            print("{:<10} {:<06d}".format(account,code))
+            print("{:<10} ".format(account),str(code).zfill(6))
         time.sleep(1)
